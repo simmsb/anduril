@@ -8,6 +8,8 @@
 #include "hank-cfg.h"
 // ATTINY: 1634
 
+#undef USE_SIMPLE_UI
+
 // this light has three aux LED channels: R, G, B
 #define USE_AUX_RGB_LEDS
 // the aux LEDs are front-facing, so turn them off while main LEDs are on
