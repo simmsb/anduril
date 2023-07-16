@@ -7,7 +7,6 @@
 
 #ifdef USE_AUX_RGB_LEDS
     // show voltage colors for a few seconds after going to standby
-    #define USE_POST_OFF_VOLTAGE
     #ifndef DEFAULT_POST_OFF_VOLTAGE_SECONDS
         #define DEFAULT_POST_OFF_VOLTAGE_SECONDS  4
     #endif

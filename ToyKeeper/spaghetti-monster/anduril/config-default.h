@@ -36,8 +36,7 @@
 #define USE_THERM_AUTOCALIBRATE
 
 // Include a simplified UI for non-enthusiasts?
-#define USE_SIMPLE_UI
-
+/* #define USE_SIMPLE_UI */
 
 ///// Ramp mode options /////
 
@@ -76,9 +75,9 @@
 // Or comment out to use Anduril2 behavior instead:
 //   - Ramp 2C goes to ceiling, unless already at ceiling or in simple UI.
 //     (Advanced UI ceiling 2C goes to turbo)
-//#define USE_2C_MAX_TURBO
+#define USE_2C_MAX_TURBO
 // Or uncomment to let the user decide which style they want:
-#define USE_2C_STYLE_CONFIG
+// #define USE_2C_STYLE_CONFIG
 // 0 = no turbo
 // 1 = A1 style: Off 2C = ceil, On 2C = turbo
 // 2 = A2 style: Off 2C = ceil, On 2C = ceil, Ramped ceil 2C = turbo
@@ -121,10 +120,12 @@
 ///// extra modes (enable / disable / configure each mode) /////
 
 // include a function to blink out the firmware version
-#define USE_VERSION_CHECK
+/* #define USE_VERSION_CHECK */
+
+#define USE_BLINK_NUM
 
 // enable the battery check mode (shows remaining charge) (requires USE_LVP)
-#define USE_BATTCHECK_MODE
+// #define USE_BATTCHECK_MODE
 // battery readout style (pick one)
 // TODO: allow VpT and 4-bar simultaneously,
 //       so one can be in "simple mode" and the other in "advanced mode"
@@ -165,7 +166,7 @@
 #define USE_MOMENTARY_MODE
 
 // enable tactical mode
-#define USE_TACTICAL_MODE
+// #define USE_TACTICAL_MODE
 
 
 // enable a shortcut for +10 in number entry mode

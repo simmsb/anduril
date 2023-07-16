@@ -81,7 +81,7 @@ uint8_t voltage_to_rgb() {
 // arg: time slice number
 void rgb_led_update(uint8_t mode, uint16_t arg) {
     static uint8_t rainbow = 0;  // track state of rainbow mode
-    static uint8_t frame = 0;  // track state of animation mode
+    /* static uint8_t frame = 0;  // track state of animation mode */
 
     // turn off aux LEDs when battery is empty
     // (but if voltage==0, that means we just booted and don't know yet)
@@ -150,14 +150,14 @@ void rgb_led_update(uint8_t mode, uint16_t arg) {
         }
     }
 
-    // pick a brightness from the animation sequence
-    if (pattern == 3) {
-        // uses an odd length to avoid lining up with rainbow loop
-        static const uint8_t animation[] = {2, 1, 0, 0,  0, 0, 0, 0,  0,
-                                            1, 0, 0, 0,  0, 0, 0, 0,  0, 1};
-        frame = (frame + 1) % sizeof(animation);
-        pattern = animation[frame];
-    }
+    /* // pick a brightness from the animation sequence */
+    /* if (pattern == 3) { */
+    /*     // uses an odd length to avoid lining up with rainbow loop */
+    /*     static const uint8_t animation[] = {2, 1, 0, 0,  0, 0, 0, 0,  0, */
+    /*                                         1, 0, 0, 0,  0, 0, 0, 0,  0, 1}; */
+    /*     frame = (frame + 1) % sizeof(animation); */
+    /*     pattern = animation[frame]; */
+    /* } */
     uint8_t result;
     #ifdef USE_BUTTON_LED
     uint8_t button_led_result;

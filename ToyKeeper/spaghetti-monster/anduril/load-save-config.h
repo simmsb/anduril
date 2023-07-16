@@ -117,7 +117,7 @@ Config cfg = {
     #ifdef USE_VOLTAGE_CORRECTION
         // same 0.05V units as fudge factor,
         // but 7 is neutral, and the expected range is from 1 to 13
-        .voltage_correction = 7,
+        .voltage_correction = 9,
     #endif
     #ifdef USE_THERMAL_REGULATION
         .therm_ceil = DEFAULT_THERM_CEIL,
@@ -158,13 +158,13 @@ Config cfg = {
 
     ///// quick aux switch saved previous modes
     #ifdef USE_QUICK_AUX_SWITCH
-	#ifdef USE_INDICATOR_LED
-		.previous_indicator_led_mode = ~INDICATOR_LED_DEFAULT_MODE,
-	#endif
-	#ifdef USE_AUX_RGB_LEDS
-		.previous_rgb_led_off_mode = ~RGB_LED_OFF_DEFAULT,
-		.previous_rgb_led_lockout_mode = ~RGB_LED_LOCKOUT_DEFAULT,
-	#endif
+    #ifdef USE_INDICATOR_LED
+        .previous_indicator_led_mode = ~INDICATOR_LED_DEFAULT_MODE,
+    #endif
+    #ifdef USE_AUX_RGB_LEDS
+        .previous_rgb_led_off_mode = ~RGB_LED_OFF_DEFAULT,
+        .previous_rgb_led_lockout_mode = ~RGB_LED_LOCKOUT_DEFAULT,
+    #endif
     #endif
 };
 
