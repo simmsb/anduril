@@ -41,7 +41,7 @@
               pkgsCross.avr.libcCross
               pkgsCross.avr.buildPackages.binutils
               pkgsCross.avr.buildPackages.bear
-              pkgsCross.avr.buildPackages.gcc8
+              pkgsCross.avr.buildPackages.gcc9
               avrlibc
               avrdude
             ];

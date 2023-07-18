@@ -382,6 +382,12 @@ uint8_t off_state(Event event, uint16_t arg) {
     }
     #endif
 
+    else if (event == EV_6clicks) {
+        blink_once();
+        set_state(croak_state, 0);
+        return EVENT_HANDLED;
+    }
+
     #ifdef USE_GLOBALS_CONFIG
     // 9 clicks, but hold last click: configure misc global settings
     else if ((event == EV_click9_hold) && (!arg)) {

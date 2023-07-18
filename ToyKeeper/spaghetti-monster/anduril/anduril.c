@@ -142,6 +142,8 @@
 #include "sos-mode.h"
 #endif
 
+#include "croak-mode.h"
+
 // this should be last, so other headers have a chance to declare values
 #include "load-save-config.h"
 
@@ -204,6 +206,8 @@
 #ifdef USE_SOS_MODE
 #include "sos-mode.c"
 #endif
+
+#include "croak-mode.c"
 
 
 // runs one time at boot, when power is connected
@@ -334,6 +338,10 @@ void loop() {
         sos_mode_iter();
     }
     #endif
+
+    else if (state == croak_state) {
+        croak_mode_iter();
+    }
 
     #ifdef USE_IDLE_MODE
     else {
